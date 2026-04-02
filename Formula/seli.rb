@@ -1,36 +1,36 @@
 class Seli < Formula
-  desc "A CLI application"
+  desc "A CLI toolkit for managing deployments and release tags"
   homepage "https://github.com/bugloper/homebrew-seli"
-  version "0.1.0"
+  version "0.2.1"
 
   if OS.mac? && Hardware::CPU.intel?
-    url "https://github.com/bugloper/homebrew-seli/releases/download/0.1.0/seli_0.1.0_darwin_amd64.tar.gz"
-    sha256 "4841d0d233db2d126de22f70b7eba234ce0a6899ee844039ef5459bf2cd62b4d"
+    url "https://github.com/bugloper/homebrew-seli/releases/download/0.2.1/seli_0.2.1_darwin_amd64.tar.gz"
+    sha256 "b456a06f0c74e400011afc973e0483d20a5ce90f4065da30f809e8a622ae2e28"
   end
 
   if OS.mac? && Hardware::CPU.arm?
-    url "https://github.com/bugloper/homebrew-seli/releases/download/0.1.0/seli_0.1.0_darwin_arm64.tar.gz"
-    sha256 "c4192b2cb05f805be7e75c37d7b87864ab94d8cd0a427e55d18bd75d158c4356"
+    url "https://github.com/bugloper/homebrew-seli/releases/download/0.2.1/seli_0.2.1_darwin_arm64.tar.gz"
+    sha256 "1030234056b2678b23f40883dad7715a4b31e0667aac6cb84fa81936fa4dd521"
   end
 
   if OS.linux? && Hardware::CPU.intel?
-    url "https://github.com/bugloper/homebrew-seli/releases/download/0.1.0/seli_0.1.0_linux_amd64.tar.gz"
-    sha256 "47f7d78f2d7cc2ef3da6a62a1c0fee0ea1435e12b715b7e67fe6a5ed762a7f29"
+    url "https://github.com/bugloper/homebrew-seli/releases/download/0.2.1/seli_0.2.1_linux_amd64.tar.gz"
+    sha256 "dc99be3a1c32e91d1238810ed6666edfb8b7395f0055589dd04c570bc7b60ff4"
   end
 
   if OS.linux? && Hardware::CPU.arm? && !Hardware::CPU.is_64_bit?
-    url "https://github.com/bugloper/homebrew-seli/releases/download/0.1.0/seli_0.1.0_linux_arm.tar.gz"
-    sha256 "4ff513c233259a31486d6026b2d6ee8fd23dc5d085e902dbea07702c43928746"
+    url "https://github.com/bugloper/homebrew-seli/releases/download/0.2.1/seli_0.2.1_linux_arm.tar.gz"
+    sha256 "f38749bfbc3e7eb31ca71ed19352d3d23fbcaa421bced719f7dd1860fe35759e"
   end
 
   if OS.linux? && Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-    url "https://github.com/bugloper/homebrew-seli/releases/download/0.1.0/seli_0.1.0_linux_arm64.tar.gz"
-    sha256 "9419da7c8b30b553f1b13d27d87eede659e4352b147cec2bec30e6f4538de11a"
+    url "https://github.com/bugloper/homebrew-seli/releases/download/0.2.1/seli_0.2.1_linux_arm64.tar.gz"
+    sha256 "86a8bdb30ff86b45e1ce1df3d0c2f2992d4a2df4fa9d75ffe43173b412813a55"
   end
 
   def install
     system "tar", "-xzf", cached_download, "-C", buildpath
-    
+
     extracted_files = Dir[buildpath/"*"]
     if extracted_files.empty?
       odie "No files found in the extracted tarball"
