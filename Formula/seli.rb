@@ -1,31 +1,31 @@
 class Seli < Formula
   desc "A CLI toolkit for managing deployments and release tags"
   homepage "https://github.com/bugloper/homebrew-seli"
-  version "0.2.1"
+  version "0.2.3"
 
   if OS.mac? && Hardware::CPU.intel?
-    url "https://github.com/bugloper/homebrew-seli/releases/download/0.2.1/seli_0.2.1_darwin_amd64.tar.gz"
-    sha256 "8d31b1e907ff8c805d710455ce5f35a4848acd69486f33b5da77267c72cd0f88"
+    url "https://github.com/bugloper/homebrew-seli/releases/download/0.2.3/seli_0.2.3_darwin_amd64.tar.gz"
+    sha256 "18c709de7e09825e8c946b91e31508bd2726cf7eeefcd76183aef28ea3ffc6c9"
   end
 
   if OS.mac? && Hardware::CPU.arm?
-    url "https://github.com/bugloper/homebrew-seli/releases/download/0.2.1/seli_0.2.1_darwin_arm64.tar.gz"
-    sha256 "31df09f77a4a84a6478161ec91daa3f8c70fb1f38ffd8e6cc67c3ccb4a2ad938"
+    url "https://github.com/bugloper/homebrew-seli/releases/download/0.2.3/seli_0.2.3_darwin_arm64.tar.gz"
+    sha256 "8d1858a5daab2675335397e716e75fda17e142eee4a197460ea63e4682045d87"
   end
 
   if OS.linux? && Hardware::CPU.intel?
-    url "https://github.com/bugloper/homebrew-seli/releases/download/0.2.1/seli_0.2.1_linux_amd64.tar.gz"
-    sha256 "a815ee1d67d775320af16c4dcb4734a84281973b17fba97ddf42679efd9cad88"
+    url "https://github.com/bugloper/homebrew-seli/releases/download/0.2.3/seli_0.2.3_linux_amd64.tar.gz"
+    sha256 "aaa60aff79960acdc7cdf4f77c47fa1c938f751b32181a76584cf828fb53468e"
   end
 
   if OS.linux? && Hardware::CPU.arm? && !Hardware::CPU.is_64_bit?
-    url "https://github.com/bugloper/homebrew-seli/releases/download/0.2.1/seli_0.2.1_linux_arm.tar.gz"
-    sha256 "b6ce77885608f86003d6bad2ab8bcc7c84c6215008adc6e417ef85b3a70b2ec3"
+    url "https://github.com/bugloper/homebrew-seli/releases/download/0.2.3/seli_0.2.3_linux_arm.tar.gz"
+    sha256 "e44fc1dd2a3459a8acd59c5fa60a815138a5b7ef33c777b2bfae9e4c834da0bf"
   end
 
   if OS.linux? && Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-    url "https://github.com/bugloper/homebrew-seli/releases/download/0.2.1/seli_0.2.1_linux_arm64.tar.gz"
-    sha256 "5ea31b2b8ac8e325f0929bb1a76cc1124031130f4e0bf7013cf47d51b8048844"
+    url "https://github.com/bugloper/homebrew-seli/releases/download/0.2.3/seli_0.2.3_linux_arm64.tar.gz"
+    sha256 "07deab168515a1873e27e6c0ee1393aa3e5909511b86a84e4e73ac8bda079ed8"
   end
 
   def install
